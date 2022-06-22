@@ -1,4 +1,4 @@
-### Curso de React
+# Curso de React
 
 ## Creación de aplicación similar a Instagram utilizando API de mascotas
 
