@@ -1,9 +1,11 @@
 ### Curso de React
 
-## Creación de aplicación similar a Instagram con mascotas
+## Creación de aplicación similar a Instagram utilizando API de mascotas
 
-##Tecnologias 
+## Tecnologias
+
 - React
 - JS
 - Webpack
 - Babel
+- styled components
