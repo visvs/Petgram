@@ -9,7 +9,7 @@ const List = styled.ul`
     display: none;
   }
   &.fixed {
-    ${bounceDown()}
+    ${scaleOn()}
     background: #fff;
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
