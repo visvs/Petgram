@@ -1,7 +1,7 @@
 import React , {useEffect, useState} from 'react';
 
 
-export function useCategoriesData () {
+export const useCategoriesData = ()=> {
   const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(false)
 
