@@ -6,7 +6,7 @@ import {useCategoriesData} from '../../customHooks/useCategoriesData'
 export const ListOfCategories = () => {
   const {categories, loading} = useCategoriesData();
   const [showFixed, setFixed] = useState(false);
-
+  
   useEffect( () => {
     const onScroll = e => {
       const newShowFixed = window.scrollY > 200
@@ -17,13 +17,12 @@ export const ListOfCategories = () => {
 
     return () => document.removeEventListener('scroll', onScroll)
   }, [showFixed])
-
   const renderList =({fixed = false})=>(
     <List className={fixed? 'fixed': ' '}>
         {
        loading
          ? <Item key='loading'><Category /></Item>
-         : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
+         : categories.map(category => <Item key={category.id}><Category {...category} path={`/pet/${category.id}`} /></Item>)
      }
     </List>     
   )
