@@ -1,10 +1,11 @@
 import React from 'react';
 import { GlobalStyle } from './styles/GlobalStyles';
 import { Logo } from './components/Logo';
-import { PhotoCardWithQuery } from './container/PhotoCardWithQuery';
 import { Home } from './pages/Home';
-
+import { Detail } from './pages/Detail';
+import { NavBar } from './components/NavBar';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';//Rutas que tendra la aplicacion, puede usarse en cualquier sitio de la app
+
 
 export const App = () => {
   const urlParams = new window.URLSearchParams(window.location.search);
@@ -13,15 +14,12 @@ export const App = () => {
     <BrowserRouter>
     <Logo/>
     <GlobalStyle/>
-    {detailID 
-    ? <PhotoCardWithQuery id={detailID}/>
-  :
-
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/pet/:id' element={<Home />} />
-    </Routes>
-  } 
+      <Route path='/detail/:detailID' element={<Detail/>} />
+    </Routes>  
+    <NavBar/>
   </BrowserRouter> 
   
   )
