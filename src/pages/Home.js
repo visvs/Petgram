@@ -8,7 +8,6 @@ const Home = () => {
   let {id} = useParams()
   const defaulID = 1;  
   id = parseInt(id)
-  console.log({id})
   return (
     <>
       <ListOfCategories />
