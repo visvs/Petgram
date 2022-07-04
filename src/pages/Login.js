@@ -11,7 +11,7 @@ const Login = () => {
   const [registerPage, setResigerPage] = useState(false)
   const { mutation, mutationLoading, mutationError } = RegisterMutation();
   const { loginMutation, LoginLoading, LoginError } = LoginMutation();
-  const {logged ,authenticate} = useContext(Context);
+  const {authenticate} = useContext(Context);
 
   const onSubmitRegister = ({email, password}) => {
     mutation({
