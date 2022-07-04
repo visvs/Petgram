@@ -1,9 +1,8 @@
 import React from 'react';
+import { getListOfFavs } from '../container/GetFavorites';
 
 const Favs = () => {
-  return (
-    <h1>Favs</h1>
-  );
+  return getListOfFavs()
 }
 
 export  {Favs};

@@ -10,8 +10,12 @@ export const Provider =({children})=>{
     <Context.Provider value={
       {logged: logged, 
         authenticate : token => {
-        setLogged(true);
-        window.sessionStorage.setItem('token', token)
+        setLogged(!logged);
+        logged && window.sessionStorage.setItem('token', token)
+      },
+      removeAuth: ()=>{
+        setLogged(false)
+        window.sessionStorage.removeItem('token')
       }}}>
         {children}
     </Context.Provider>
