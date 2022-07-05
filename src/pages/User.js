@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../context'; 
+import { SubmitButton} from '../components/SubmitButton';
+import {TitlePage} from '../components/SubmitButton/style';
 
 const User = () => {
+  const {removeAuth} = useContext(Context);
   return (
-    <h2> login user</h2>
+    <>
+      <TitlePage> Usuario </TitlePage>
+      <SubmitButton 
+      onClick={removeAuth}
+      >Cerrar sesión</SubmitButton>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { useQuery , gql} from '@apollo/client';
 import { ListOfFavs } from '../components/listOfFavs';
 import { Context } from '../context';
-
+import {Text} from '../components/UserForm/style';
 const GET_FAVS=gql`
 query getFavs{
   favs {
@@ -30,6 +30,5 @@ export const getListOfFavs = ()=>{
     return <p>{`Error: ${error}`}</p>
   }
   const {favs} = data
-
-  return <ListOfFavs favs={favs} />
+  return favs.length > 0 ? <ListOfFavs favs={favs} /> : <Text>Ups! Aún no tienes ningún favorito</Text>
 }

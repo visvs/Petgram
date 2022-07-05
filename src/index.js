@@ -28,7 +28,7 @@ const authMiddleware = new ApolloLink((operation, forward)=>{
 const errorMiddleware = onError(({networkError}) =>{
   if(networkError && networkError.result.code === "invalid_token"){
     sessionStorage.removeItem('token')
-    window.Location = '/user'
+    window.Location = '/login'
   }
 })
 const client = new ApolloClient({
@@ -50,5 +50,4 @@ root.render(
       <App />
     </ApolloProvider>
   </Provider>
-
 );

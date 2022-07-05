@@ -5,7 +5,6 @@ import { useGetPhotos } from '../../customHooks/useGetPhoto';
 export const ListOfPhotoCard = ({categoryID}) => {
 
   const { loading, error, data } = useGetPhotos(categoryID)
-  console.log({categoryID})
   if (error) {
     return <h2>Internal Server Error</h2>;
   }
