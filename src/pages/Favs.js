@@ -1,11 +1,13 @@
 import React from 'react';
 import { getListOfFavs } from '../container/GetFavorites';
-import { TitlePage } from '../components/SubmitButton/style';
+import { Layout } from '../components/Layout';
+
 const Favs = () => {
   return (
     <>
-      <TitlePage> Favoritos </TitlePage>
+    <Layout title={`Tus favoritos`} subtitle={'Aqui puedes encontrar tus favoritos'}>      
       {getListOfFavs()}
+    </Layout>
     </>
   )
 }

@@ -13,11 +13,6 @@ export const Button = styled.button`
   }
 `;
 
-export const TitlePage = styled.h1`
-  text-align:center;
-  color: #8d00ff;
-  margin-bottom: 10px;
-`;
 export const ImageNotFound = styled.img`
   object-fit: cover;
   width: 90%;

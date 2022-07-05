@@ -1,6 +1,7 @@
 import React from 'react';
 import notFoundImage from 'images/not_found.gif'
-import { TitlePage, ImageNotFound } from '../components/SubmitButton/style';
+import { ImageNotFound } from '../components/SubmitButton/style';
+import { TitlePage } from '../components/Layout/style';
 export const NotFound = () => {
   return (
     <>

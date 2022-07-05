@@ -4,7 +4,9 @@
   "description": "## Creación de aplicación similar a Instagram con mascotas",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode development", 
+    "start:dev": "npx serve dist -s", 
+    "serve:dev": "npm run build && npm run start:dev" ,    
     "lint": "standart",
     "dev": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +32,7 @@
     "graphql": "^16.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5"

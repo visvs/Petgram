@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useMemo} from 'react';
 import { Category } from '../Category';
 import {List, Item} from './styles';
 import {useCategoriesData} from '../../customHooks/useCategoriesData'
@@ -34,3 +34,4 @@ export const ListOfCategories = () => {
     </>
   )
 }
+
