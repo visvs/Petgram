@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifestPlugin = require('webpack-pwa-manifest'); 
 
 module.exports = {
 	entry: path.join(__dirname, 'src', 'index.js'),
@@ -56,6 +57,20 @@ module.exports = {
 			template: './public/index.html',
 			filename: './index.html'
 		}),
+    new WebpackPwaManifestPlugin({
+      name: 'Petgram - Tu app de mascotas chulas',
+      short_name: 'Petgram 🐈',
+      description: 'En petgram podras encontrar fotos de mascotas domesticas muy chulas',
+      background_color: '#fff',
+      theme_color: '#b1a',
+      icons: [
+        {
+          src: path.resolve('src/assets/icon.png'),
+          sizes: [96,128,192,256,384, 512],
+          purpose: 'maskable'
+        }
+      ]
+    }) 
 	],
 
 }
