@@ -15,6 +15,7 @@ export const Nav = styled.nav`
   margin: 0 auto;
   position: fixed;
   width: 100%;
+  max-width: 500px;
   z-index: 1000;
 `;
 
