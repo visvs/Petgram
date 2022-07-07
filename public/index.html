@@ -16,8 +16,8 @@
         if('serviceWorker' in navigator){
             window.addEventListener('load', function(){
                 navigator.serviceWorker.register('/service-worker.js')
-                .then(registration => {
-                    console.log({registrado: registration});
+                .then(registration => {/* 
+                    console.log({registrado: registration}); */
                 })
                 .catch(error =>{
                     console.log(error)

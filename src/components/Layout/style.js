@@ -14,4 +14,5 @@ export const Subtitle = styled.h2`
 `
 export const Div = styled.div`
     padding: 16px;    
+    background-color: #F7E2D6;
 `
